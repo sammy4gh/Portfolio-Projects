@@ -1,0 +1,331 @@
+@import "config";
+@import "utilities";
+
+
+body {
+     @include text;
+    background-color: $secondary-color;
+    font-family: 'Poppins',  sans-serif;
+    font-weight: 400;
+}
+
+main{
+
+ width: 60%;
+ margin: 0 auto;
+
+}
+
+header{
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+margin: auto;
+padding: 0.5rem;
+background: $secondary-color;
+z-index: 1;
+font-size: 15px;
+/* box-shadow: 0 1px 4px rgba(0,0,0,.1); */
+}
+
+    .nav-bar{
+      width: 60%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    font-weight: $semi-bold;
+    }
+    nav{
+       
+        ul{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+.change-theme{
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: $semi-bold;
+}
+
+#intro{
+   height: 100vh;
+   @include grid;
+   color: inherit;
+    .intro-text{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h1{
+            font-weight: bold;
+            font-size:4rem;
+        }
+
+        p{
+            @include text;
+
+        }
+        
+        a{
+            @include button;
+            display: flex;
+            align-items: center;
+            padding:0.2rem 0.6rem;
+            width: 5rem;
+            border-radius: 10px;
+            font-size: 29px;
+            margin-top: 2rem;
+            text-align: left;
+            font-weight: 700px
+        }
+    }
+    .intro-image {
+width: 30rem;
+
+        img{
+            margin-top: 6rem;
+            width: 100%;
+        }
+    
+    }
+}
+
+
+#service{
+    @include grid;
+    height: 100vh;
+  
+   .service-image{
+       
+        img{
+            margin-top: 4rem;
+             width: 25rem;
+             height: 90%;
+        }
+    }
+
+    .service-text{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+       
+         h2 {
+    /*          @include title; */
+            
+             font-size: 3rem;
+             font-weight: bold;
+         }
+
+         p {
+             @include text;
+
+         }
+
+         a{
+             @include button;
+              display: flex;
+            align-items: center;
+            padding:0.2rem 0.6rem;
+            width: 5.5rem;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 1rem;
+            text-align: left;
+            font-weight: 700px
+         }
+    }
+}
+
+#features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
+    h2{
+        /* @include title; */
+        text-align: center;
+        font-size: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .feature-cards{
+        
+        display: flex;
+        justify-content: center;
+        align-content: center;
+       
+        .card{
+            @include card;
+             width: 250px;
+            
+            img{
+                @include card-img;
+            }
+        }
+
+       
+    }
+
+}
+
+#accountants{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+     h2 {
+         /* @include title; */
+         text-align: center;
+         font-size: 3rem;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;
+     }
+
+     .accountant-cards{
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+
+         .card{
+             @include card;
+                width: 224px;
+             img{
+                 @include card-img
+             }
+         }
+     }
+}
+
+#contact{
+    margin-top: 80px;
+    background-color:$primary-color;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+     padding: 1rem;
+     border-radius: 10px;
+    justify-content: center;
+   
+
+    .contact-form{
+        color: $secondary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        form {
+            margin-top: 1em;
+            background-color: $secondary-color;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+
+       input{
+           border-radius: 10px;
+           border: none;
+
+       }
+
+       .send-input{
+           background-color: inherit;
+
+             display: flex;
+             padding: 0.8em;
+             margin: auto;
+             margin: 0.2em;
+       }
+         .send-input ::placeholder{
+              display: flex;
+             padding: 0.8em;
+             margin: auto;
+             margin: 0.2em;
+             font-style: italic;
+         }
+
+         .button{
+             background-color: $primary-color;
+             font-weight: $semi-bold;
+             padding: 0.8em;
+             margin: auto;
+             margin: 0.2em;
+             color: $secondary-color;
+         }
+       
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            display: flex;
+           
+        }
+    }
+
+    footer{
+        padding: 4rem;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        
+        align-content: center;
+       width: 60%;
+        .motto{
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .social{
+            ul{
+                display: flex;
+            }
+            
+        }
+
+    }
+
+    .copyright{
+        text-align: center;
+        font-style: italic;
+        font-weight: 50;
+    }
+
+
+  /* Dark Mode */
+ .dark-theme{
+    background-color: $dark-secondary-color;
+    color: $dark-text-color;
+ }
+
+ 
+body.dark-theme {
+     background-color: $dark-secondary-color;
+     color: $dark-text-color;
+   
+}
+main.dark-theme{
+    color: $dark-text-color;
+}
+h2.dark-theme{
+    color: $dark-text-color;
+}
+
+
+/* const themeButton= document.querySelector('.themeButton');
+
+themeButton.addEventListener('click', function(){
+    document.body.classList.toggle("dark-body");
+})
+ */

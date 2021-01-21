@@ -1,0 +1,65 @@
+/* light Theme */
+$primary-color:#4e4eca;
+$secondary-color:#e5e5f1;
+/* :#F4F4FC; */
+$text-color:#000000;
+$semi-bold:600;
+$header-height: 3rem;
+
+/* Dark Theme */
+$dark-primary-color:#4e4eca;
+$dark-secondary-color:#33333d;
+$dark-text-color:#efeff8;
+
+
+
+
+
+
+@mixin button {
+    color: $secondary-color;
+    background-color: $primary-color;
+    font-weight: $semi-bold;
+    padding: .4em;
+}
+
+@mixin title {
+    color: $text-color;
+    font-weight: bold;
+}
+
+
+@mixin card-img {
+   width: 40%;
+    margin-bottom:20px ;
+}
+
+
+@mixin card {
+   background-color:#ffff;
+  margin: 0.5rem;
+   border-radius: 10px;
+   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+    color: $text-color;
+}
+
+@mixin grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     align-items: center;
+     justify-content: center;
+     grid-gap: 4rem;
+}
+@mixin text {
+    color: $text-color;
+
+}
+@mixin onhover {
+    background-color: #161627 ;
+}
