@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 /* ------------------------------Dark Mode --------------------------------------*/
 function dark() {
-    $('body,header,main').toggleClass("dark-theme");
+    $('body,header,main, nav').toggleClass("dark-theme");
     
 }
 $("#theme-button").click(function(){
